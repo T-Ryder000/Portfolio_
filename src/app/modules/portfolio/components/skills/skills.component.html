@@ -1,0 +1,28 @@
+<section class="container-skills">
+  <h1 class="title-skills">Conhecimentos</h1>
+
+  <div class="container-w">
+    <nav class="nav-skills">
+      <ul class="center-h">
+        <li class="btn" [class.active]="activeItem === 'Front-End'" (click)="setActive('Front-End')"><strong>Front-End</strong></li>
+        <li class="btn" [class.active]="activeItem === 'Back-End'" (click)="setActive('Back-End')"><strong>Back-End</strong></li>
+      </ul>
+    </nav>
+
+    @if(activeItem === 'Front-End'){
+      <div class="container-front">
+        <ul class="list-skills">
+          <li class="skill_name"><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
+          <li class="skill_name"><i class="fa-brands fa-angular"></i><span>Angular</span></li>
+          <li class="skill_name"><i class="fa-brands fa-html5"></i><span>Html5</span></li>
+          <li class="skill_name"><i class="fa-brands fa-css3"></i><span>Css</span></li>
+          <li class="skill_name"><i class="fa-brands fa-bootstrap"></i><span>BootStrap</span></li>
+        </ul>
+      </div>
+    }
+    @else {
+      <div class="container-back"></div>
+    }
+
+  </div>
+</section>
