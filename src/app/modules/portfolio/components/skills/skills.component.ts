@@ -11,8 +11,14 @@ import { CommonModule } from '@angular/common';
 export class SkillsComponent {
 
   activeItem = 'Front-End';
+  container = "container-Front-End";
 
   setActive(item: string){
     this.activeItem = item;
+    this.container = "container-" + item;
   }
+
+  
+
+ 
 }

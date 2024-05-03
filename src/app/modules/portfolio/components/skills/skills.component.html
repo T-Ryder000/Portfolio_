@@ -1,4 +1,4 @@
-<section class="container-skills">
+<section [class]="container">
   <h1 class="title-skills">Conhecimentos</h1>
 
   <div class="container-w">
@@ -12,16 +12,23 @@
     @if(activeItem === 'Front-End'){
       <div class="container-front">
         <ul class="list-skills">
-          <li class="skill_name"><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
-          <li class="skill_name"><i class="fa-brands fa-angular"></i><span>Angular</span></li>
-          <li class="skill_name"><i class="fa-brands fa-html5"></i><span>Html5</span></li>
-          <li class="skill_name"><i class="fa-brands fa-css3"></i><span>Css</span></li>
+          <li class="skill_name"><i class="fa-brands fa-html5"></i><span>HTML</span></li>
+          <li class="skill_name"><i class="fa-brands fa-css3"></i><span>CSS</span></li>
           <li class="skill_name"><i class="fa-brands fa-bootstrap"></i><span>BootStrap</span></li>
+          <li class="skill_name"><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
+          <li class="skill_name"><i class="fa-solid fa-code"></i><span>TypeScript</span></li>
+          <li class="skill_name"><i class="fa-brands fa-angular"></i><span>Angular</span></li>
         </ul>
       </div>
     }
     @else {
-      <div class="container-back"></div>
+      <div class="container-back">
+        <ul class="list-skills">
+          <li class="skill_name"><i class="fa-brands fa-node-js"></i><span>Node.Js</span></li>
+          <li class="skill_name"><i class="fa-brands fa-java"></i><span>Java</span></li>
+          <li class="skill_name"><i class="fa-solid fa-code"></i><span>Spring Boot</span></li>
+        </ul>
+      </div>
     }
 
   </div>

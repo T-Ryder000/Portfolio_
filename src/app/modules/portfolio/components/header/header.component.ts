@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,36 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+    this.loadExternalScript('../../../../../assets/javascript/header.js')
+      .then(() => {
+        console.log('Script carregado com sucesso!');
+        // Aqui você pode chamar funções do script externo, se necessário
+      })
+      .catch(() => {
+        console.error('Erro ao carregar o script.');
+      });
+  }
+
+  loadExternalScript(url: string): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      const scriptElement = document.createElement('script');
+      scriptElement.src = url;
+      
+      // Usando uma função de seta para garantir que 'this' se refira ao contexto correto
+      scriptElement.onload = () => {
+        resolve(); // Resolva a Promise quando o script for carregado com sucesso
+      };
+      
+      scriptElement.onerror = () => {
+        reject(); // Rejeite a Promise em caso de erro ao carregar o script
+      };
+
+      document.body.appendChild(scriptElement);
+    });
+  }
 }

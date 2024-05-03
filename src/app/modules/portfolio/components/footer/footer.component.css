@@ -1,0 +1,41 @@
+.footer{
+  margin-top: 50px;
+  border-top: 2px solid #c90002;
+  color: white;
+  background-color: black;
+}
+
+.container-footer{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 2em;
+}
+
+.credits-text{
+  font-size: 1em;
+}
+
+.container-medias{
+  display: flex;
+  gap: 2em;
+}
+
+.icon-footer{
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.icon-footer:hover{
+  transition: all 0.2s;
+  transform: scale(1.02);
+  color: #c90002;
+}
+
+@media screen and (max-width: 500px) {
+  .container-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+}
