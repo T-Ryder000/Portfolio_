@@ -27,8 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/javascript/header.js"
+            "scripts": ["src/assets/javascript/header.js"
             ]
           },
           "configurations": {
